@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Verdana, Tahoma, sans-serif;
   overflow-x: hidden;
@@ -390,6 +394,14 @@ main {
   height: 100%;
   width: 100%;
   object-fit: contain;
+}
+
+.card h4 {
+  cursor: pointer;
+}
+
+.card h4:hover {
+  text-decoration: underline;
 }
 
 .cardInfo {

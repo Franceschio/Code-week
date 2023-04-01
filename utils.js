@@ -75,6 +75,7 @@ const createCard = (data) => {
   });
 
   imgCont.addEventListener("click", () => createNewReport(data));
+  cardTitle.addEventListener("click", () => createNewReport(data));
 
   imgCont.appendChild(cardImg);
   cardInfo.append(cardTitle, cardDescription);
@@ -84,6 +85,8 @@ const createCard = (data) => {
 };
 
 const createNewReport = (data) => {
+  window.scrollTo(0, 0);
+
   report.innerHTML = "";
 
   const first = cE("div");

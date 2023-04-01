@@ -61,7 +61,7 @@ search.addEventListener("submit", (e) => {
       report.textContent = "Error";
       mainCard.innerHTML = "";
       newH1.style.color = "red";
-      newH1.textContent = `The following location: "${searched.value}" has not be found. Be sure you write it correctly and retry.`;
+      newH1.textContent = `The following location: "${searched.value}" has not be found. Be sure you write it correctly.`;
       mainCard.append(newH1);
       return;
     }

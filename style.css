@@ -309,10 +309,10 @@ main {
   align-items: center;
   justify-content: center;
   gap: 25px;
-  flex-wrap: wrap;
   padding: 30px;
   box-shadow: 5px 2px 5px rgba(2, 12, 212, 0.8),
     -5px 2px 5px rgba(2, 12, 212, 0.8);
+  flex-wrap: wrap;
 }
 
 .searchs {
@@ -330,9 +330,9 @@ main {
   border-radius: 50px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 70px;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 70px;
   padding: 30px;
   box-shadow: 5px 2px 5px rgba(2, 12, 212, 0.8),
     -5px 2px 5px rgba(2, 12, 212, 0.8);
@@ -354,12 +354,18 @@ main {
   border-radius: 50px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 70px;
-  flex-wrap: wrap;
   padding: 30px;
   box-shadow: 5px 2px 5px rgba(2, 12, 212, 0.8),
     -5px 2px 5px rgba(2, 12, 212, 0.8);
+  flex-wrap: wrap;
+}
+
+.favoriteLocations::-webkit-scrollbar,
+.weatherCards::-webkit-scrollbar,
+.searchedLocations::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
@@ -549,37 +555,40 @@ main {
   }
 
   .weatherCards {
+    justify-content: flex-start;
     border-radius: 20px;
-  }
-
-  .weatherCards .card {
-    height: 130px;
-    width: 80px;
-    font-size: 8px;
+    gap: 20px;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 
   .searchedLocations {
-    justify-content: center;
     border-radius: 20px;
-    gap: 40px;
-  }
-
-  .searchedLocations .card {
-    height: 130px;
-    width: 80px;
-    font-size: 8px;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 
   .favoriteLocations {
-    justify-content: center;
     border-radius: 20px;
-    gap: 40px;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 
-  .favoriteLocations .card {
+  .card {
     height: 130px;
-    width: 80px;
+    width: 100px;
     font-size: 8px;
+  }
+
+  .card .cardInfo {
+    width: 150px;
   }
 
   .star {

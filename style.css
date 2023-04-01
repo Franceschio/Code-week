@@ -538,7 +538,7 @@ footer {
   width: 100vw;
   background-color: rgb(0, 0, 118);
   color: white;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -639,6 +639,14 @@ footer span {
 
   .more {
     width: 250px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+
+  footer ul {
+    width: 100%;
   }
 }
 

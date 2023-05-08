@@ -59,6 +59,7 @@ const createCard = (data) => {
     } else {
       const repliants = locRep.filter((loc) => {
         if (newObj.id == loc.id) {
+          deleteTitle.style.color = "red";
           deleteTitle.textContent = `The location: "${newObj.name}" is already on favorites.`;
           deleteFavorite.style.display = "flex";
           return newObj;

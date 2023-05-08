@@ -20,6 +20,9 @@ const createCard = (data) => {
   cardDescription.textContent = data.weather[0].description;
 
   star.addEventListener("click", () => {
+    deleteTitle.textContent = `The location: "${data.name}" has been added on favorites.`;
+    deleteTitle.style.color = "green";
+    deleteFavorite.style.display = "flex";
     const newObj = {
       id: data.id,
       name: data.name,
@@ -216,8 +219,8 @@ const createFavorite = (card) => {
 };
 
 const removeFavorite = (fav, cardEl) => {
+  deleteTitle.style.color = "red";
   deleteTitle.textContent = `The location: "${fav.name}" has been removed from favorites.`;
-
   deleteFavorite.style.display = "flex";
   const cardElOld = cardEl;
   cardElOld.remove();
